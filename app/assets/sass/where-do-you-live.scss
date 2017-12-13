@@ -1,12 +1,13 @@
+
+.hidden {
+  display: none;
+}
+
 .where-do-you-live__content {
   padding-bottom: 20px;
 
   h2 {
     margin-top: 20px;
-  }
-
-  #location-autocomplete {
-    margin-bottom: 30px;
   }
 
   .country-select{
@@ -17,11 +18,11 @@
 
     .country-select__error {
       color: red;
-
     }
 
     button {
-      margin: 10px 0;
+      margin: 0;
+      margin-top: 30px;
     }
   }
 }

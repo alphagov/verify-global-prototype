@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: verify-eidas-notification
+  - name: verify-global
     memory: 512M
     buildpack: nodejs_buildpack
     command: npm start

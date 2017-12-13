@@ -5,21 +5,32 @@
   <title>
     {% block title %}{% endblock %}
   </title>
-  <link href="https://www.revenue.ie/SiteElements/css/foundation.min.css?version=752" rel="stylesheet" type="text/css" />
-  <link href="https://www.revenue.ie/SiteElements/css/foundation-icons.css?version=754" rel="stylesheet" type="text/css" />
-  <link href="https://www.revenue.ie/SiteElements/css/site.css?version=66916" rel="stylesheet" type="text/css" />
-  <!--[if IE 9]><link href="https://www.revenue.ie/SiteElements/css/ie9.css?version=22732" rel="stylesheet" type="text/css" />
-  <![endif]--><link href="https://www.revenue.ie/SiteElements/css/footnote.css?version=35535" rel="stylesheet" type="text/css" />
-  <link href="https://www.revenue.ie/SiteElements/css/hacks.css?version=42732" rel="stylesheet" type="text/css" />
-  <link href="https://www.revenue.ie/SiteElements/css/print.css?version=39488" rel="stylesheet" type="text/css" />
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/jquery.js?version=37258&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/jquery-ui-1.9.2.custom.js?build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/foundation.min.js?build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/bowser.min.js?build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/app.js?version=66172&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/outdated-browser.js?version=25982&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/cookie-banner.js?version=27471&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/GoogleAnalytics.js?version=42538&amp;build=831928"></script>
+  <link href="/SiteElements/css/foundation.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/SiteElements/css/foundation-icons.css" rel="stylesheet"
+        type="text/css"/>
+  <link href="/SiteElements/css/site.css" rel="stylesheet" type="text/css"/>
+  <!--[if IE 9]>
+  <link href="/SiteElements/css/ie9.css" rel="stylesheet" type="text/css"/>
+  <![endif]-->
+  <link href="/SiteElements/css/footnote.css" rel="stylesheet" type="text/css"/>
+  <link href="/SiteElements/css/hacks.css" rel="stylesheet" type="text/css"/>
+  <link href="/SiteElements/css/print.css" rel="stylesheet" type="text/css"/>
+
+
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/jquery.js?version=37258&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/jquery-ui-1.9.2.custom.js?build=831928"></script>
+  <script type="text/javascript" src="https://www.revenue.ie/SiteElements/js/foundation.min.js?build=831928"></script>
+  <script type="text/javascript" src="https://www.revenue.ie/SiteElements/js/bowser.min.js?build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/app.js?version=66172&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/outdated-browser.js?version=25982&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/cookie-banner.js?version=27471&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/GoogleAnalytics.js?version=42538&amp;build=831928"></script>
 
   {% block additional_headers %}{% endblock %}
 </head>
@@ -97,8 +108,10 @@
       <div class="row columns">
 
         <div class="columns small-10 medium-11 large-11">
-          <p>Tabhair do d’aire go bhfuil roinnt codanna den suíomh idirlín ar fáil i mBéarla amháin. Tá siad á n-aistriú go Gaeilge agus beidh siad ar fáil roimh dheireadh 2017.</p>
-          Please note that some sections of the site are currently only available in English. They are currently being translated into Irish and will be available before the end of 2017.
+          <p>Tabhair do d’aire go bhfuil roinnt codanna den suíomh idirlín ar fáil i mBéarla amháin. Tá siad á n-aistriú
+            go Gaeilge agus beidh siad ar fáil roimh dheireadh 2017.</p>
+          Please note that some sections of the site are currently only available in English. They are currently being
+          translated into Irish and will be available before the end of 2017.
         </div>
 
         <div class="columns small-2 medium-1 large-1">
@@ -112,19 +125,17 @@
     </div>
     <script>
       $(document).ready(
-          function()
-          {
-            $( "table" ).wrap( "<div class='table-scroll'></div>");
+          function () {
+            $("table").wrap("<div class='table-scroll'></div>");
             var lastchild = $('.revenue .breadcrumb .row div span:last-child').text();
             if (lastchild != "") $('.revenue .breadcrumb .row div span:last-child').remove();
 
-            var pattern  = RegExp("/[^/]+(?=/$|$)");
+            var pattern = RegExp("/[^/]+(?=/$|$)");
             var pattern2 = RegExp("[^/]+(?=/$|$)");
-            var numeric4digit =  RegExp("[0-9][0-9][0-9][0-9]");
+            var numeric4digit = RegExp("[0-9][0-9][0-9][0-9]");
             var newpath = window.location.href.replace(pattern, "");
             var year = newpath.match(pattern2)[0];
-            if (!isNaN(parseFloat(year)) && isFinite(year) && year.length == 4)
-            {
+            if (!isNaN(parseFloat(year)) && isFinite(year) && year.length == 4) {
               var lnk = $('.revenue .breadcrumb .row div a:last').attr("href") + "?year=" + year;
               $('.revenue .breadcrumb .row div a:last').attr("href", lnk);
             }
@@ -162,16 +173,17 @@
             <div class="small-collapse">
               <div class="columns">
                 <div class="input-group">
-                  <input name="searchInput" id="searchInput" aria-label="Search" placeholder="Search" type="text" class="input-group-field" rev-max-chars="140"/>
+                  <input name="searchInput" id="searchInput" aria-label="Search" placeholder="Search" type="text"
+                         class="input-group-field" rev-max-chars="140"/>
                   <div class="input-group-button">
                     <button id="btnSearch" class="button icon-button" type="button">
-                      <img alt="Please click search" src="https://www.revenue.ie/SiteElements/images/svg/search.svg" />
+                      <img alt="Please click search" src="https://www.revenue.ie/SiteElements/images/svg/search.svg"/>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-            <input type="hidden" id="prefLang" value="English" data-idlang="0" />
+            <input type="hidden" id="prefLang" value="English" data-idlang="0"/>
 
           </div>
         </div>
@@ -180,7 +192,7 @@
       <script>
         var path;
 
-        (function() {
+        (function () {
 
           RevenueJs.PreferredLanguage = "English";
 
@@ -191,11 +203,11 @@
 
       <script>
         (function () {
-          RevenueJs.Localisation.ShowMore =  htmlDecode("Show more");
-          RevenueJs.Localisation.ShowLess =  htmlDecode("Show less");
-          RevenueJs.Localisation.BackToTextFootnoteLink =  htmlDecode("Back to text");
-          RevenueJs.Localisation.PrintAllPagesIn =  htmlDecode("Print all pages in");
-          function htmlDecode(input){
+          RevenueJs.Localisation.ShowMore = htmlDecode("Show more");
+          RevenueJs.Localisation.ShowLess = htmlDecode("Show less");
+          RevenueJs.Localisation.BackToTextFootnoteLink = htmlDecode("Back to text");
+          RevenueJs.Localisation.PrintAllPagesIn = htmlDecode("Print all pages in");
+          function htmlDecode(input) {
             if (input == "") return "";
             var e = document.createElement('div');
             e.innerHTML = input;
@@ -212,9 +224,44 @@
         </div>
       </div>
     </div>
+    <div class="hub-destination-pages">
+      <div class="content row">
 
-{% block content %}{% endblock %}
+        <div class="large-7 columns">
+          {% block content %}{% endblock %}
+          <div class="bottom-links row">
+          <p>
+            <em>Published: 07 June 2017</em>
 
+            <a class="print" href="javascript:window.print()">Print this page</a>
+          </p>
+        </div>
+        </div>
+        <div class="large-4 columns">
+          <div class="collapsible-list-links">
+            <ul id="T999_ulplace" class="collapsible-list-links">
+              <li class="technical-legal no-print">
+                <a href="#">Further guidance</a>
+
+                <div class="full-content">
+                  <ul class="documents-list related-links">
+                    <li>
+
+                      <a class="pdf" href="/en/self-assessment-and-self-employment/documents/guide-pay-file.pdf"
+                         title="Guide to completing 2016 Pay and File tax returns" target="_blank">Guide to completing
+                        2016
+                        Pay and File tax returns</a>The main purpose of this guide is to assist individuals who are taxed
+                      under the selfassessment system to complete their 2016 tax return – the Form 11.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="footer-navigation">
       <div class="row">
 
@@ -242,7 +289,6 @@
               <li><a  title="Research" href="/404.html">Research</a></li>
               <li><a  title="Careers" href="/404.html">Careers</a></li>
               <li><a  title="Revenue Museum" href="/404.html">Revenue Museum</a></li>
-
             </ul>
             <ul>
               <li>
@@ -274,7 +320,6 @@
               </li>
               <li><a  title="Reporting shadow economy activity (tax evasion)" href="/404.html">Reporting shadow economy activity (tax evasion)</a></li>
               <li><a  title="Drug and tobacco smuggling" href="/404.html">Drug and tobacco smuggling</a></li>
-
             </ul>
             <ul>
               <li>
@@ -307,16 +352,26 @@
     </div>
   </div>
 
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/footnote.js?version=40758&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/Js/CollapseFilterAndContentPages.js?version=40695&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/QualtricsInterceptors/FeedbackSinglePage.js?version=42144&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/HandleSearchInputForMobile.js?version=42501&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/DocumentsListColapseOlderVersions.js?version=47439&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/Autocomplete.js?version=74307&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/lang-preference.js?version=48328&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/google-analytics-doc-download.js?version=44283&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/google-analytics-outward-link-click.js?version=44244&amp;build=831928"></script>
-  <script  type="text/javascript" src="https://www.revenue.ie/SiteElements/js/localise-survey-link.js?version=43011&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/footnote.js?version=40758&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/Js/CollapseFilterAndContentPages.js?version=40695&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/QualtricsInterceptors/FeedbackSinglePage.js?version=42144&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/HandleSearchInputForMobile.js?version=42501&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/DocumentsListColapseOlderVersions.js?version=47439&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/Autocomplete.js?version=74307&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/lang-preference.js?version=48328&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/google-analytics-doc-download.js?version=44283&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/google-analytics-outward-link-click.js?version=44244&amp;build=831928"></script>
+  <script type="text/javascript"
+          src="https://www.revenue.ie/SiteElements/js/localise-survey-link.js?version=43011&amp;build=831928"></script>
   {% block footer_scripts %}{% endblock %}
 </div>
 </body>

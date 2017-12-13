@@ -4,7 +4,7 @@ set -eu
 
 CF_API="api.cloud.service.gov.uk"
 CF_ORG="govuk-verify"
-CF_SPACE="verify-global-prototype"
+CF_SPACE="notification"
 
 if [ -z "${CF_USER:-}" ]; then
   # For running locally

@@ -73,6 +73,8 @@ utils.addNunjucksFilters(nunjucksAppEnv)
 // Set views engine
 app.set('view engine', 'html')
 
+app.use('/SiteElements', express.static(path.join(__dirname, '/app/assets/public')))
+
 // Middleware to serve static assets
 app.use('/public', express.static(path.join(__dirname, '/public')))
 app.use('/public', express.static(path.join(__dirname, '/app/assets/public')))

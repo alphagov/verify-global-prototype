@@ -18,6 +18,10 @@ router.get('/gov-ie/how-long-have-you-lived-in-the-uk', function (req, res) {
   res.render('gov_ie/how_long')
 });
 
+router.get('/gov.ie/why_verify', function (req, res) {
+  res.render('gov_ie/why_verify')
+});
+
 router.get('/gov-uk/guidence/living-in-ireland', function (req, res) {
   res.render('gov_uk/guidence/living-in-ireland')
 });
@@ -44,6 +48,10 @@ router.get('/ros.ie/myaccount-register', function (req, res) {
 
 router.get('/ros.ie/myaccount-signin', function (req, res) {
   res.render('ros_ie/myaccount_signin')
+});
+
+router.get('/revenue.ie/online-services/where-are-you-from', function (req, res) {
+  res.render('revenue_ie/where_are_you_from')
 });
 
 module.exports = router;

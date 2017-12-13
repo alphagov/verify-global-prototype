@@ -14,6 +14,9 @@ router.get('/gov-uk/guidence/living-in-ireland', function (req, res) {
   res.render('gov_uk/guidence/living-in-ireland')
 })
 
+router.get('/revenue.ie/online-services/file-an-income-tax-return', function (req, res) {
+    res.render('revenue_ie/irish_tax_return.html')
+})
 // add your routes here
 
 module.exports = router

@@ -28,7 +28,7 @@ else
   cf target -o "$CF_ORG" -s "$CF_SPACE"
 fi
 
-cd verfiy-global-prototype
+cd verify-global-prototype
 cf push
 
 cd ../cf_basic_auth_route_service

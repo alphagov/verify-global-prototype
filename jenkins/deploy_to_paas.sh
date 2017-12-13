@@ -28,4 +28,18 @@ else
   cf target -o "$CF_ORG" -s "$CF_SPACE"
 fi
 
+cd verfiy-global-prototype
 cf push
+
+cd ../cf_basic_auth_route_service
+
+cf push verfiy-global-basic-auth --no-start
+cf set-env verfiy-global-basic-auth AUTH_USERNAME ${AUTH_USERNAME}
+cf set-env verfiy-global-basic-auth AUTH_PASSWORD ${AUTH_PASSORD}
+cf start verfiy-global-basic-auth --no-start
+
+cf create-user-provided-service verfiy-global-basic-auth -r https://verfiy-global-basic-auth.cloudapps.digital
+cf bind-route-service cloudapps.digital my-basic-auth-service --hostname verfiy-global
+
+
+

@@ -25,6 +25,11 @@ router.get('/revenue.ie/online-services/file-an-income-tax-return', function (re
 router.get('/revenue.ie/online-services/view_statement', function (req, res) {
   res.render('revenue_ie/view_statement')
 });
+
+router.get('/revenue.ie/online-services/where-are-you-from', function (req, res) {
+  res.render('revenue_ie/where_are_you_from')
+});
+
 // add your routes here
 
 module.exports = router;

@@ -1,19 +1,24 @@
 {% extends "layouts/revenue.html" %}
 <{% block content %}
 
-Your tax balance
-Personal details
-Name: Shane Murphy
-Date of birth: 26 February 1984
-Tax address: 23 Moher Road, Cork, Ireland
-Your tax balance
-Taxes paid for current tax year (2017/2018): €0.00
-Taxes paid for previous tax year (2016/2017): €2225.00
-Amount outstanding for the previous tax year (2016/2017): €325.00
+<h1><b>Your tax balance</b></h1>
 
-Pay the outstanding balance of your tax due for previous year
+<h2>Personal details</h2>
+    <ul>
+        <li>Name: Shane Murphy</li>
+        <li>Date of birth: 26 February 1984</li>
+        <li>Tax address: 23 Moher Road, Cork, Ireland</li>
+    </ul>
+<h2>Your tax balance</h2>
+    <ul>
+        <li>Taxes paid for current tax year (2017/2018): €0.00</li>
+        <li>Taxes paid for previous tax year (2016/2017): €2225.00</li>
+        <li>Amount outstanding for the previous tax year (2016/2017): €325.00</li>
+    </ul>
+
+<p>Pay the outstanding balance of your tax due for previous year
 <button class="button" onclick="window.open('/404.html', '_blank')" type="button">PAY</button>
 
-
+</p>
 {% endblock %}
 

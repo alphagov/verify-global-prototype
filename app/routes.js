@@ -30,4 +30,8 @@ router.get('/revenue.ie/online-services/register_for_myaccount', function (req, 
   res.render('revenue_ie/register_for_myaccount')
 });
 
+router.get('/ros.ie/myaccount-register', function (req, res) {
+  res.render('ros_ie/myaccount_register')
+});
+
 module.exports = router;

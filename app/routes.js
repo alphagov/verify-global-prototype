@@ -10,6 +10,10 @@ router.get('/gov-ie/where-do-you-live', function (req, res) {
   res.render('gov_ie/where_do_you_live')
 });
 
+router.get('/gov-ie/where-are-you-from', function (req, res) {
+  res.render('gov_ie/where_are_you_from')
+});
+
 router.get('/gov-ie/how-long-have-you-lived-in-the-uk', function (req, res) {
   res.render('gov_ie/how_long')
 });

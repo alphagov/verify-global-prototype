@@ -15,7 +15,7 @@ router.get('/gov-uk/guidence/living-in-ireland', function (req, res) {
 })
 
 router.get('/revenue.ie/online-services/file-an-income-tax-return', function (req, res) {
-    res.render('revenue_ie/irish_tax_return.html')
+    res.render('revenue_ie/irish_tax_return')
 })
 // add your routes here
 

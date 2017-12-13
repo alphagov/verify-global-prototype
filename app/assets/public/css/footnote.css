@@ -1,0 +1,34 @@
+﻿a.footnote-list-item-anchor {
+  font-weight: bold;
+}
+
+a.footnote-pointer {
+  border-bottom: 0;
+}
+
+/* The :after arrow will have position absolute */
+a.footnote-list-item-anchor {
+  position: relative; 
+}
+
+ol.footnotes-list li, ol.footnotes-list a {
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.3rem;
+}
+
+ol.footnotes-list a:last:after {
+  content: '↑';
+  font-weight: normal;
+  position: absolute;
+  left: calc(100% + 0.25rem);
+  display: inline-block;
+}
+
+/* Outline on focus as per site.css:
+	a:focus,
+	.revenue input:focus,
+	.revenue button:focus */
+li.footnote-list-item:focus {
+  outline: #00c6c6 solid 3px;
+}

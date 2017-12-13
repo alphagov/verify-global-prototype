@@ -32,6 +32,8 @@ router.get('/revenue.ie/online-services/view_statement', function (req, res) {
 
 router.get('/revenue.ie/online-services/register_for_myaccount', function (req, res) {
   res.render('revenue_ie/register_for_myaccount')
+router.get('/revenue.ie/online-services/tax-balance', function (req, res) {
+  res.render('revenue_ie/tax_balance.html')
 });
 
 router.get('/ros.ie/myaccount-register', function (req, res) {
@@ -42,8 +44,6 @@ router.get('/ros.ie/myaccount-signin', function (req, res) {
   res.render('ros_ie/myaccount_signin')
 });
 
-router.get('/revenue.ie/online-services/where-are-you-from', function (req, res) {
-  res.render('revenue_ie/where_are_you_from')
 });
 
 module.exports = router;

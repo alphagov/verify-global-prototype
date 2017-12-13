@@ -214,3 +214,20 @@ $path: "/public/images/";
   }
 
 }
+// About certified companies
+.list-companies {
+  margin-bottom: $gutter-half;
+
+  li {
+    @include inline-block;
+    width: 50%;
+
+    @include media (tablet) {
+      width: 24%;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

@@ -34,4 +34,8 @@ router.get('/ros.ie/myaccount-register', function (req, res) {
   res.render('ros_ie/myaccount_register')
 });
 
+router.get('/ros.ie/myaccount-signin', function (req, res) {
+  res.render('ros_ie/myaccount_signin')
+});
+
 module.exports = router;

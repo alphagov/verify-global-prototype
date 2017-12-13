@@ -1,0 +1,65 @@
+/* When you paste a table from MS Word into Contensis, paragraph tags wrap
+	the td's contents, so we get bottom margin of 16px.  Since removing the
+	<p> tags has proven very problematic, the following works around the
+	existence of the <p> tags by removing their bottom margin. */
+table td p {
+  margin-bottom: 0;
+}
+
+/* Some instances of IE don't smooth fonts properly. This only applies to
+	dark text on white background. A very minor change to the font size
+	resolves this. */
+.revenue .section-list h1,
+.revenue .list-links a {
+  font-size: 1.13rem;
+}
+
+.leftbox-news-tablecell > p{
+	margin-top: 12px;
+}
+
+/* 
+Some instances of IE don't align anchor text correctly inside an <li>,
+or text (innerHTML) of a <button>. This solution comes from:
+http://www.dead-pixel.de/align-texts-at-the-baseline-of-different-font-webfonts/
+*/
+a:after, button:after {
+  content: '';
+  font-family: Verdana;
+}
+
+
+/* Foundation's 'Visibility Classes' simply don't work properly, so we'll do it ourselves. */
+
+/* Hack for hide on [large | medium | small] *********************** */
+
+@media screen and (min-width: 64em) {
+  .hide-on-large-only {
+	display: none;
+  }
+}
+@media screen and (max-width: 63.9375em) {
+  .hide-on-medium-down {
+	display: none;
+  }
+}
+/* End of hack for hide on [large | medium | small] *********************** */
+
+.news.row.hide-on-medium-down {
+  padding-left: 15px;
+}
+
+.news table {
+  padding: 0;
+  margin: 0;
+}
+
+.news table td:nth-child(1) {
+    border: 0;
+    border-right: 15px solid #ecedee;
+    vertical-align: top; 
+}
+
+.leftbox-news-tablecell {
+  width: 33%;
+}

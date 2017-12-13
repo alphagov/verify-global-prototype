@@ -38,4 +38,8 @@ router.get('/ros.ie/myaccount-signin', function (req, res) {
   res.render('ros_ie/myaccount_signin')
 });
 
+router.get('/revenue.ie/online-services/where-are-you-from', function (req, res) {
+  res.render('revenue_ie/where_are_you_from')
+});
+
 module.exports = router;

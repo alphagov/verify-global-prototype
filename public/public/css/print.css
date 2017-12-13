@@ -1,0 +1,133 @@
+@media print {
+  a[href]:after {
+    content: "";
+    /* Overriding contensis default */
+  }
+  /* fonts */
+  .revenue .content h1 {
+    font-size: 1.9rem;
+  }
+  .revenue .content h1 span,
+  .revenue .content h2 {
+    font-size: 1.5rem;
+  }
+  .revenue .content p,
+  .revenue .content ul,
+  .revenue .content .hub-index ol li,
+  .hub-destination-pages .collapsible-list-links .full-content,
+  .hub-destination-pages .collapsible-list-links .full-content li {
+    font-size: .9rem;
+  }
+  .revenue .info-box h1 {
+    font-size: 1.125rem;
+  }
+  /* top bar logo */
+  .revenueLogo img {
+    content: url("../Images/svg/Revenue-logo-BLACK.svg") !important;
+    width: 70%;
+  }
+  /* show/hide */
+  .revenue #top-bar *,
+  .revenue .input-group,
+  .revenue .links,
+  .revenue .vertical-bar,
+  .revenue .breadcrumb,
+  .revenue .switch,
+  .revenue .bottom-links,
+  .revenue .footer-navigation,
+  .revenue .footer,
+  .yearSelectorHeader,
+  #YearList{
+    display: none;
+  }
+  .revenue #top-bar > div:not(.show-for-small-only) {
+    display: block;
+  }
+  .revenue #top-bar > div:not(.show-for-small-only) div.logo {
+    display: block;
+  }
+  .revenue #top-bar > div:not(.show-for-small-only) div.logo * {
+    display: block;
+  }
+  .revenue #top-bar > div:not(.show-for-small-only)::after {
+    content: "www.revenue.ie";
+    margin-top: -70px;
+    float: right;
+  }
+  .hub-destination-pages .collapsible-list-links .full-content {
+    display: block !important;
+  }
+  /* borders and margins */
+  .revenue button.button,
+  .revenue .content .deadlines .calendar,
+  .revenue .top-section .deadlines .calendar,
+  .revenue .list-links a,
+  .collapsible-list-links > ul > li > a,
+  .hub-destination-pages .collapsible-list-links > ul > li,
+  .revenue .content table tr,
+  .revenue .info-box {
+    border: 1px solid;
+  }
+  .revenue #top-bar {
+    border-bottom: 1px solid black;
+  }
+  .hub-destination-pages .collapsible-list-links > ul > li > a {
+    border: 0;
+    margin-bottom: 0;
+  }
+  .revenue .top-section button.button:after,
+  .revenue .content .button:after {
+    background-image: url("../Images/svg/arrow-right-bold-BLACK.svg") !important;
+  }
+  .revenue .content,
+  .hub-destination-pages .content {
+    padding-top: 0;
+  }
+  .revenue .content .section-page {
+    padding-right: 0;
+  }
+  .revenue .content h1,
+  .revenue .content h2,
+  .revenue .content h3,
+  .revenue .content h4 {
+    border-top: 1px solid black;
+    padding-top: .5em;
+  }
+  .revenue .info-box h1,
+  .revenue .content table thead tr {
+    border: 0;
+  }
+  .hub-destination-pages .collapsible-list-links > ul > li {
+    margin-bottom: 1rem;
+  }
+  .hub-destination-pages .collapsible-list-links > ul > li > a {
+    color: #333 !important;
+  }
+  .collapsible-list-links > ul > li.collapsed > a:before {
+    background: url("../Images/svg/expando-close.svg") right top no-repeat;
+    top: 10px;
+    height: 30px;
+  }
+  
+  .bottom-links {
+    padding: 0;
+    margin-bottom: -2rem;
+  }
+
+  
+  /* page breaks */
+  .revenue .info-box,
+  .hub-destination-pages .collapsible-list-links > ul > li,
+  .revenue .content table {
+    page-break-inside: avoid;
+  }
+  /* specific pages */
+  .online-services-home .online-services-home__services > div > h3,
+  .online-services-home ul[class~='services-tabs__tab-activators'],
+  .online-services-home .online-services__heading--large-up {
+    display: none;
+  }
+  .online-services-home .collapsible-list-links {
+    margin-top: 0;
+  }
+}

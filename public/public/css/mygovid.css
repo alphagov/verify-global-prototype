@@ -1,0 +1,156 @@
+
+
+.mygov {
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1px;
+  vertical-align: middle;
+  background-image:none;
+  white-space: nowrap;
+  cursor: pointer;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  display: block;
+  font-family: "Helvetica","Open Sans",Arial,sans-serif; 
+
+}
+
+  .mygov:hover, 
+  .mygov:focus, 
+  .mygov:active, 
+  .mygov.active, 
+  .mygov:active:focus, 
+  .mygov:active:hover, 
+  .mygov.active:focus, 
+  .mygov.active:hover {
+    color: #fff;
+    text-decoration: none;
+  transition: opacity 0.5s ease;
+  opacity: 0.75;
+    }
+
+
+
+
+.mygov:active,
+.mygov.active {
+ -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0 !important; 
+}
+
+
+.mygov-xl {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+.mygov-xl img {
+    height: 40px;
+    vertical-align: middle;
+    margin-top: -7px;
+
+
+  }
+
+
+.mygov-lg {
+  font-size: 18px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  width: 80%;
+}
+
+
+
+.mygov-lg img {
+    height: 40px;
+    vertical-align: middle;
+    margin-top: -6px;
+
+
+  }
+
+.mygov-md{
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  /*width: 50%;*/
+  min-width: 215px;
+
+}
+
+.mygov-md img {
+    height: 25px;
+    vertical-align: middle;
+    margin-top: -4px;
+
+
+
+  }
+
+
+.mygov-xs {
+  padding-top: 10px;
+  padding-bottom: 8px;
+  font-size: 14px;
+  border-radius: 3px;
+    width: 25%;
+
+}
+
+.mygov-xs img {
+    height: 25px;
+    vertical-align: middle;
+    margin-top: -4px;
+
+
+  }
+
+
+.mygov-primary {
+  color: #fff; 
+  background-color: #007da4;
+  border: none;
+}
+
+
+  .mygov-primary:hover, .mygov-primary:focus, .mygov-primary:active, .mygov-primary.active, .mygov-primary:active:focus, .mygov-primary:active:hover, .mygov-primary.active:focus, .mygov-primary.active:hover, .open > .mygov-primary.dropdown-toggle, .open > .mygov-primary.dropdown-toggle:focus, .open > .mygov-primary.dropdown-toggle:hover {
+    background-color: #007da4;
+     }
+
+
+
+  .mygov-primary.disabled, .mygov-primary.disabled:hover, .mygov-primary.disabled:focus, .mygov-primary.disabled.focus, .mygov-primary.disabled:active, .mygov-primary.disabled.active, .mygov-primary:disabled, .mygov-primary:disabled:hover, .mygov-primary:disabled:focus, .mygov-primary:disabled.focus, .mygov-primary:disabled:active, .mygov-primary:disabled.active, .mygov-primary[disabled], .mygov-primary[disabled]:hover, .mygov-primary[disabled]:focus, .mygov-primary[disabled].focus, .mygov-primary[disabled]:active, .mygov-primary[disabled].active, fieldset[disabled] .mygov-primary, fieldset[disabled] .mygov-primary:hover, fieldset[disabled] .mygov-primary:focus, fieldset[disabled] .mygov-primary.focus, fieldset[disabled] .mygov-primary:active, fieldset[disabled] .mygov-primary.active {
+    background-color: transparent;
+    border-color: #3472F7; }
+
+
+  .mygov-primary.mygov-fill {
+    color: #FFFFFF;
+    background-color: #3472F7;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+    
+    .mygov-primary.mygov-fill:hover, .mygov-primary.mygov-fill:focus, .mygov-primary.mygov-fill:active, .mygov-primary.mygov-fill.active, .open > .mygov-primary.mygov-fill.dropdown-toggle {
+      background-color: #1D62F0;
+      color: #FFFFFF; }
+    
+
+.mygov-text{
+  margin-top: 10px;
+
+}
+
+
+
+

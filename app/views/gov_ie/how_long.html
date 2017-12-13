@@ -1,1 +1,60 @@
-HOW LONG
+{% extends "layouts/revenue.html" %}
+
+{% block title %}File an income tax return{% endblock %}
+
+{% block additional_headers %}
+<link href="/public/stylesheets/where-do-you-live.css" rel="stylesheet" type="text/css"/>
+{% endblock %}
+
+{% block content %}
+<h1>
+  File an Income Tax return
+</h1>
+<a href="#">&larr; Back</a>
+
+<div id="content">
+
+  <div class="where-do-you-live__content">
+
+    <h2>How long have you been living in the UK?</h2>
+    <div class="radio-group">
+      <div>
+        <input id="stay_more" type="radio" name="stay" value="more">
+        <label for="stay_more">More than 12 months</label>
+      </div>
+      <div>
+        <input id="stay_less" type="radio" name="stay" value="less">
+        <label for="stay_less">Less 12 months</label>
+      </div>
+    </div>
+    <button id="next-button" class="button" onclick="nextPage()" type="button">Confirm</button>
+    <div class="country-select__error hidden">Please select an option</div>
+
+  </div>
+</div>
+{% endblock %}
+
+{% block footer_scripts %}
+<script type="text/javascript">
+  //remove form inputs leading and trailing spaces
+  $(document).ready(function () {
+    $('form').submit(function () {
+      $(this).find('input:text').each(function () {
+        $(this).val($.trim($(this).val()));
+      });
+    });
+
+    nextPage = function() {
+      var stayMore = document.getElementById('stay_more').checked;
+      var stayLess = document.getElementById('stay_less').checked;
+      if (!(stayLess || stayMore)) {
+        document.getElementsByClassName('country-select__error')[0].classList.remove('hidden');
+      } else if (stayMore) {
+        window.location.href = "/verify/";
+      } else {
+        window.location.href = "/404";
+      }
+    }
+  });
+</script>
+{% endblock %}

@@ -2817,11 +2817,6 @@ p#filterInfo{
     display: block;
 }
 
-
-input[type="radio"] {
-    display:none;
-}
-
 input[type="radio"] {
     color: #292321;
     font-family:Arial, sans-serif;

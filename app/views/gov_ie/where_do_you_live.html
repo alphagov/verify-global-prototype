@@ -1,1 +1,197 @@
-GOV IE
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>myAccount</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no"/>
+
+
+  <link href="/public/css/fira.css" rel="stylesheet">
+  <link href="/public/css/vendor.min.css" rel="stylesheet">
+  <link href="/public/css/app.css" rel="stylesheet">
+  <link href="/public/css/mygovid.css" rel="stylesheet">
+
+  <script src="https://www.ros.ie/myaccount-web/resources/rim/js/vendor.min.js"></script>
+  <script src="https://www.ros.ie/myaccount-web/resources/rim/js/jquery.validate.min.js"></script>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://www.ros.ie/myaccount-web/resources/rim/js/html5shiv.min.js"></script>
+  <script src="https://www.ros.ie/myaccount-web/resources/rim/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="https://www.ros.ie/myaccount-web/resources/rim/js/selectivizr.js"></script>
+  <![endif]-->
+
+  <link href="/public/css/location-autocomplete.min.css" rel="stylesheet" type="text/css" />
+  <link href="/public/stylesheets/where-do-you-live.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<nav class="navbar navbar-revenue">
+  <div class="container">
+    <div class="col-sm-12">
+      <div class="navbar-headers">
+        <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"
+                class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span
+            class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <div class="navbar-brand navbar-brand-revenue-access"><a href="/404"
+                                                                 target="blank"><img
+            src="https://www.ros.ie/myaccount-web/resources/rim/img/revenue.png" alt="myAccount"></a></div>
+
+
+        <a href="/404" class="navbar-brand outline-accesibility-tab-img-black"><img
+            src="https://www.ros.ie/myaccount-web/resources/rim/img/myaccount_green@2x.png" alt="myAccount"></a>
+
+      </div>
+
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="/404" class="gaeilge">Gaeilge</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
+
+<script type="text/javascript">
+
+  var RecaptchaOptions = {
+    theme: 'clean',
+    custom_translations: {
+      visual_challenge: "Get a visual challenge",
+      audio_challenge: "Get an audio challenge",
+      refresh_btn: "Get a new challenge",
+      instructions_visual: "Type the text from the image				",
+      instructions_context: "Type the text from the image				",
+      instructions_audio: "Type what you hear				",
+      help_btn: "Help",
+      play_again: "Play sound again",
+      cant_hear_this: "Download sound as MP3",
+      incorrect_try_again: "Incorrect. Try again.",
+      image_alt_text: "reCAPTCHA challenge image",
+      privacy_and_terms: "Privacy & Terms"
+    }
+  };
+</script>
+
+
+<div id="content">
+  <!-- Header end-->
+  <!-- Content start-->
+  <div class="progress--section2">
+    <div class="container">
+      <div class="progressText">Where do you live?</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row where-do-you-live__content">
+
+      <div class="country-select autocomplete-wrapper">
+        <label for="location-autocomplete">Select your country</label>
+        <select id="location-autocomplete">
+          <option value="" disabled selected>Pick an option</option>
+        </select>
+
+        <div class="signin-btn">
+          <button id="next-button" class="btn btn-primary btn-next">
+            Confirm
+            <span aria-hidden="true" class="icon icon-next"></span>
+          </button>
+          <div class="country-select__error hidden">Please select a country</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <ul class="footer-nav">
+          <li><a href="/404" target="_blank"
+                 title="This link opens the myAccount help in a new window">
+            myAccount Help</a>
+            <span class="circle2">●</span>
+          </li>
+          <li><a href="/404" target="_blank"
+                 title="This link opens the Security Statement in a new window">
+            Security</a>
+            <span class="circle2">●</span>
+          </li>
+          <li><a href="/404" target="_blank"
+                 title="This link opens the privacy policy in a new window">
+            Privacy</a>
+            <span class="circle2">●</span>
+          </li>
+          <li><a href="/404" target="_blank"
+                 title="This link opens the Accessibilty Statement in a new window">
+            Accessibility</a></span>
+            <span class="circle2">●</span>
+          </li>
+          <li><a href="/404" target="_blank"
+                 title="This link opens the disclaimer in a new window">
+            Disclaimer</a></span>
+            <span class="circle2">●</span>
+          </li>
+        </ul>
+        <p>Language:
+          <a href="/404" class="gaeilge">Gaeilge</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://www.ros.ie/myaccount-web/resources/rim/js/app.js"></script>
+<script src="https://www.ros.ie/myaccount-web/resources/rim/js/toast.js"></script>
+
+<script src="https://www.ros.ie/myaccount-web/resources/rim/js/en.js"></script>
+
+
+<script src="https://www.ros.ie/myaccount-web/resources/rim/js/password_validation.js"></script>
+<script src="https://www.ros.ie/myaccount-web/resources/rim/js/customValidations.js"></script>
+
+<script type="text/javascript" src="/public/javascripts/location-autocomplete.min.js"></script>
+<script type="text/javascript">
+  //remove form inputs leading and trailing spaces
+  $(document).ready(function () {
+    $('form').submit(function () {
+      $(this).find('input:text').each(function () {
+        $(this).val($.trim($(this).val()));
+      });
+    });
+
+    openregisterLocationPicker({
+      defaultValue: '',
+      selectElement: document.getElementById('location-autocomplete'),
+      url: '/public/javascripts/location-autocomplete-graph.json'
+    })
+
+    document.getElementById('next-button').addEventListener('click', function() {
+      var selectedValue = document.getElementById('location-autocomplete').value
+      if(selectedValue === "") {
+        document.getElementsByClassName('country-select__error')[0].classList.remove('hidden');
+      } else if(selectedValue === "United Kingdom") {
+        window.location.href = "/gov-ie/how-long-have-you-lived-in-the-uk";
+      } else {
+        window.location.href = "/404";
+      }
+    })
+  });
+</script>
+
+</body>
+</html>

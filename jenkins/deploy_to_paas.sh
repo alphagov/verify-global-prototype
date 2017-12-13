@@ -35,7 +35,7 @@ cd ../cf_basic_auth_route_service
 
 cf push verfiy-global-basic-auth --no-start
 cf set-env verfiy-global-basic-auth AUTH_USERNAME ${AUTH_USER}
-cf set-env verfiy-global-basic-auth AUTH_PASSWORD ${AUTH_PASSORD}
+cf set-env verfiy-global-basic-auth AUTH_PASSWORD ${AUTH_PASSWORD}
 cf start verfiy-global-basic-auth --no-start
 
 cf create-user-provided-service verfiy-global-basic-auth -r https://verfiy-global-basic-auth.cloudapps.digital

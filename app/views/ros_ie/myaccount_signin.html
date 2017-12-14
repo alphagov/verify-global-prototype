@@ -14,34 +14,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no" />
-    
-  
+
+
 	<link href="https://www.ros.ie/myaccount-web/resources/rim/fonts/Fira/fira.css" rel="stylesheet">
     <link href="https://www.ros.ie/myaccount-web/resources/rim/css/vendor.min.css" rel="stylesheet">
     <link href="https://www.ros.ie/myaccount-web/resources/rim/css/app.css" rel="stylesheet">
     <link href="https://www.ros.ie/myaccount-web/resources/rim/css/mygovid.css" rel="stylesheet">
-    
+
     <script src="https://www.ros.ie/myaccount-web/resources/rim/js/vendor.min.js"></script>
 	<script src="https://www.ros.ie/myaccount-web/resources/rim/js/jquery.validate.min.js"></script>
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->	
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
 	    <script src="https://www.ros.ie/myaccount-web/resources/rim/js/html5shiv.min.js"></script>
 	    <script src="https://www.ros.ie/myaccount-web/resources/rim/js/respond.min.js"></script>
 	    <![endif]-->
-    
+
      <!--[if (gte IE 6)&(lte IE 8)]>
     	 <script src="https://www.ros.ie/myaccount-web/resources/rim/js/selectivizr.js"></script>
      <![endif]-->
   </head>
   <body>
   	<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
 
 
 
@@ -53,40 +53,40 @@
           <div class="navbar-headers">
             <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
             <div class="navbar-brand navbar-brand-revenue-access"><a href="http://www.revenue.ie/en/index.html" target="blank"><img src="https://www.ros.ie/myaccount-web/resources/rim/img/revenue.png" alt="myAccount"></a></div>
-            
-            
-				
-				
+
+
+
+
 					<a href="home.html" class="navbar-brand outline-accesibility-tab-img-black"><img src="https://www.ros.ie/myaccount-web/resources/rim/img/myaccount_green@2x.png" alt="myAccount"></a>
-				
-			
+
+
           </div>
-            
+
           <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-            <li>  		  
-				
-			  		
-			  			
-							
-							
+            <li>
+
+
+
+
+
 								<a href="https://www.ros.ie/myaccount-web/sign_in.html?execution=e2s1&lang=ga" class="gaeilge">Gaeilge</a>
-							
-					  	
-			  		
-			  		
-				  
-			</li>	  
-              
-              
-              
+
+
+
+
+
+			</li>
+
+
+
             </ul>
           </div>
-          
+
         </div>
       </div>
     </nav>
-    
+
 
 
 
@@ -121,37 +121,37 @@
 
 $(document).ready(function() {
 
-	
+
 	//populates the three date fields in the event that the server validation fails.
 	populateThreeDateField("dob-input","dob-day-input","dob-month-input","dob-year-input");
-	
-	$( "form" ).submit(function( event ) {	
+
+	$( "form" ).submit(function( event ) {
      		populateSingleDateField("dob-day-input","dob-month-input","dob-year-input","dob-input");
 	});
-	
-	
+
+
 	$("#loginForm").validate({
-		
+
 		rules: {
-			
+
 			"ppsn": {
 				regex  : '^[0-9]{7}[A-Wa-w][A-Ia-iTWXZtwxz ]?$'
 			},
 	        "dob-year-input": {
 	              datemultiple: ["#dob-day-input", "#dob-month-input", "#dob-year-input",'^(0[1-9]|[12][0-9]|3[01])[/](0[1-9]|1[012])[/](19|20)\\d\\d$']
 	          }
-		
+
 		},
-		
+
 		messages: {
-			
+
 			"ppsn": {
 				regex: 'Please enter a valid PPS number'
 				},
 		    "dob-year-input": {
 		         datemultiple: 'Must be a valid date in the correct format (DD MM YYYY)'
 		          }
-			
+
 		},
 		  errorPlacement: errorElementFunc,
 		    highlight: highlightErrorFunc,
@@ -159,7 +159,7 @@ $(document).ready(function() {
 		    onkeyup: cleanUpErrorElements,
 		    onsubmit: true,
 	        onfocusout: function(element) { $(element).valid(); }
-		}); 
+		});
 	});
 
 
@@ -181,39 +181,39 @@ $(document).ready(function() {
               </div>
             </div>
             <form id="loginForm" class="border-right" action="/myaccount-web/sign_in.html?execution=e2s1&amp;_eventId=login" method="post" autocomplete="off">
-            
+
             <div class="signin-circle">Or</div>
-                        
-            
+
+
               	<div class="col-sm-8 col-sm-offset-1 signin-error-container errorHide">
-              		
+
               	</div>
-              
+
               <div class="row field-text">
                 <div class="form-group col-sm-6 col-sm-offset-1">
                   <label for="pps-input">PPS Number</label>
-                  
+
                   <div id="pps-input-error-marker" class="validation-error-icon hidden">
                     <!--add class 'validation-error-icon' to display the marker-->
                   </div>
                   <div class="status-container ">
                     <input id="pps-input" name="ppsn" type="text" class="form-control" value=""/>
                   </div>
-                
+
                 <div id="pps-input-error-text" class="status-message col visible status-error">
-               	  
+
                 </div>
 				</div>
               </div>
-                  
-           
-              
-	 	
+
+
+
+
               <div id="date-input-group" class="row field-date">
                 <div class="form-group col-sm-6 col-sm-offset-1 field-group-date" >
                 <p>Date of Birth</p>
                    <input id="dob-input" name="dateOfBirth" type="hidden" value=""/>
-                  
+
 	                  <div id="dob-error-marker" class="validation-error-icon hidden date-error-marker">
 	                    <!--add class 'validation-error-icon' to display the marker-->
 	                  </div>
@@ -238,31 +238,31 @@ $(document).ready(function() {
 	                    </div>
 	                    <div class="help-block">YYYY</div>
 	                  </div>
-                  
+
                 <div id="dob-error-text" class="status-message col-xs-12 visible top-margin-xs status-error">
-                  	 
+
                 </div>
                 </div>
-                 
-              </div>             
+
+              </div>
               <div class="row field-password">
                 <div class="form-group col-sm-6 col-sm-offset-1">
                   <label for="password-input">Password</label>
-                  
+
 	                  <div id="password-input-error-marker" class="validation-error-icon hidden">
 	                    <!--add class 'validation-error-icon' to display the marker-->
 	                  </div>
 	                  <div class="status-container ">
 	                    <input id="password-input" name="password" class="form-control js-password" type="password" value=""/>
 	                  </div>
-                 
+
 				 <div id="password-input-error-text" class="status-message col visible status-error">
-               	  
+
                  </div>
                   <div class="help-block">Temporary passwords and PAYE Anytime PINs can also be used</div>
                 </div>
               </div>
-              
+
               <div class="row">
                 <div class="col-sm-8 col-sm-offset-1"><a href="reset-password.html" class="underline password-forget">Forgot Password?</a>
                   <div class="spacer"></div>
@@ -307,10 +307,10 @@ $(document).ready(function() {
               </div>
             </div>
             <!-- MyGovID -->
-            
-            
-            
-            
+
+
+
+
             <div class="row">
               <div class="register-btn col-sm-10 col-sm-offset-2">
                 <div class="help-block register-help-block">If you have a verified MyGovID account, you can use your MyGovID details to sign in</div>
@@ -325,18 +325,19 @@ $(document).ready(function() {
              	<div class="help-block register-help-block">Or</div>
              	<div class="spacer-sm"></div>
               </div>
-            </div> 
-            
+            </div>
+
             <!-- Register -->
             <form action="register.html" method="get">
               <div class="register-btn col-sm-10 col-sm-offset-2">
                 <div class="row btn">
-                  <button type="submit" class="btn btn-primary btn-next">Register Now<span aria-hidden="true" class="icon icon-next"></span></button>
+                  <a href="myaccount_register" class="btn btn-primary btn-next">Register Now<span aria-hidden="true" class="icon icon-next"></span></button>
                 </div>
                 <div class="help-block register-help-block">If you already have a temporary password or PAYE Anytime PIN, use this to sign in.  You do not need to register again. </div>
+								<hr />
 							<div class="help-block register-help-block">
 								<p>
-									You can signin to your myAccount by proving your identity if you <a href="#">live abroad</a> or have <a hhref="#">recently moved</a> to Ireland.
+									If you <a href="/gov-ie/where-do-you-live">live abroad</a> or have <a href="#">recently moved</a> to Ireland, you might be able to sign in with an online identity account from another country.
 								</p>
 							</div>
 
@@ -346,13 +347,13 @@ $(document).ready(function() {
 
         </div>
       </div>
-      
-      
+
+
     </div>
 
 
-    
-    
+
+
 
 
 
@@ -363,18 +364,18 @@ $(document).ready(function() {
         <div class="row">
           <div class="col-sm-8">
             <ul class="footer-nav">
-              <li><a href="http://www.revenue.ie/en/online/myaccount/helptext.html" target="_blank" 
-				title="This link opens the myAccount help in a new window"> 
+              <li><a href="http://www.revenue.ie/en/online/myaccount/helptext.html" target="_blank"
+				title="This link opens the myAccount help in a new window">
 				myAccount Help</a>
               	<span class="circle2">●</span>
               </li>
-               <li><a href="http://www.revenue.ie/en/online/myaccount/security.html" target="_blank" 
-				title="This link opens the Security Statement in a new window"> 
+               <li><a href="http://www.revenue.ie/en/online/myaccount/security.html" target="_blank"
+				title="This link opens the Security Statement in a new window">
 				Security</a>
 				<span class="circle2">●</span>
 			  </li>
-              <li><a href="http://www.revenue.ie/en/online/myaccount/privacy.html" target="_blank" 
-				title="This link opens the privacy policy in a new window"> 
+              <li><a href="http://www.revenue.ie/en/online/myaccount/privacy.html" target="_blank"
+				title="This link opens the privacy policy in a new window">
 				Privacy</a>
 				<span class="circle2">●</span>
 			  </li>
@@ -389,45 +390,45 @@ $(document).ready(function() {
 				<span class="circle2">●</span>
 			 </li>
             </ul>
-            <p>Language: 
-           		
-			  		
-			  			
-							
-							
+            <p>Language:
+
+
+
+
+
 								<a href="https://www.ros.ie/myaccount-web/sign_in.html?execution=e2s1&lang=ga" class="gaeilge">Gaeilge</a>
-							
-					  	
-			  		
-			  		
-			  
+
+
+
+
+
            </p>
           </div>
         </div>
       </div>
     </div>
-    
-   
+
+
     <script src="https://www.ros.ie/myaccount-web/resources/rim/js/app.js"></script>
     <script src="https://www.ros.ie/myaccount-web/resources/rim/js/toast.js"></script>
     <!--    Validation disabled, as requested-->
     <!--script src="https://www.ros.ie/resources/rim/js/validation.js"-->
     <!--    I18n - Internationalization resources for English/Gaelic-->
-    
-		
-		
+
+
+
 			<script src="https://www.ros.ie/myaccount-web/resources/rim/js/en.js"></script>
-		
-  	
+
+
     <script src="https://www.ros.ie/myaccount-web/resources/rim/js/password_validation.js"></script>
     <script src="https://www.ros.ie/myaccount-web/resources/rim/js/customValidations.js"></script>
-    
 
-	
-	
-	
-	
-     
+
+
+
+
+
+
 	<script type="text/javascript">
      	//remove form inputs leading and trailing spaces
     		$(document).ready(function() {
@@ -437,8 +438,8 @@ $(document).ready(function() {
     	  	      });
     	  	});
     	    });
-    	
+
 	</script>
-	    
+
   </body>
 </html>

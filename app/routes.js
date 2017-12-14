@@ -18,7 +18,7 @@ router.get('/gov-ie/how-long-have-you-lived-in-the-uk', function (req, res) {
   res.render('gov_ie/how_long')
 });
 
-router.get('/gov.ie/why_verify', function (req, res) {
+router.get('/gov.ie/why-verify', function (req, res) {
   res.render('gov_ie/why_verify')
 });
 

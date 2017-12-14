@@ -24,8 +24,8 @@
         <option value="" disabled selected>Pick an option</option>
       </select>
 
-      <button class="button" onclick="window.open('/404.html', '_blank')" type="button">Confirm</button>
-      <div class="country-select__error" display="none">Please select a country</div>
+      <button id="next-button" class="button" onclick="nextPage()" type="button">Confirm</button>
+      <div class="country-select__error hidden">Please select a country</div>
     </div>
   </div>
 </div>
@@ -48,7 +48,7 @@
       url: '/public/javascripts/location-autocomplete-graph.json'
     })
 
-    document.getElementById('next-button').addEventListener('click', function () {
+    nextPage = function() {
       var selectedValue = document.getElementById('location-autocomplete').value
       if (selectedValue === "") {
         document.getElementsByClassName('country-select__error')[0].classList.remove('hidden');
@@ -57,7 +57,7 @@
       } else {
         window.location.href = "/404";
       }
-    })
+    }
   });
 </script>
 {% endblock %}

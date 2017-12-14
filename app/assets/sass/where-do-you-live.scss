@@ -1,3 +1,8 @@
+
+.hidden {
+  display: none;
+}
+
 .where-do-you-live__content {
   padding-bottom: 20px;
 
@@ -5,23 +10,23 @@
     margin-top: 20px;
   }
 
-  #location-autocomplete {
-    margin-bottom: 30px;
-  }
-
   .country-select{
     label {
       padding: 0;
       padding-bottom: 10px;
     }
-
-    .country-select__error {
-      color: red;
-
-    }
-
-    button {
-      margin: 10px 0;
-    }
   }
+}
+
+.button {
+  margin: 0;
+  margin-top: 30px;
+}
+
+.country-select__error {
+  color: red;
+}
+
+.radio-group {
+  margin: 20px 0;
 }
